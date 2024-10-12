@@ -60,7 +60,7 @@ function loder() {
   //   stagger: 0.3,
   // });
 }
-loder()
+// loder()
 
 function page1(){
   tl.from('#page1 .nav_items h4',{
@@ -75,6 +75,6 @@ function page1(){
     duration: 0.5,
   })
 }
-page1()
+// page1()
 Shery.makeMagnet("#page1 nav .nav_items h4", {});
 
