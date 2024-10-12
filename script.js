@@ -1,36 +1,5 @@
 const h2 = document.querySelector("#line_part_1 h2");
 
-let tl = gsap.timeline();
-
-tl.to("#loder .line h3", {
-  opacity: 1,
-  duration: 0.3,
-  onStart: function () {
-    let count = "";
-    setInterval(function () {
-      if (count === 100) {
-        clearInterval();
-      } else {
-        count++;
-        h2.innerHTML = count;
-      }
-    }, 30);
-  },
-});
-
-tl.from("#loder .line h1, .line p", {
-  y: 160,
-  duration: 0.6,
-  stagger: 0.5,
-  delay: 0.5,
-});
-tl.to("#loder", {
-  opacity: 0,
-  duration: 0.7,
-  delay: 1.5,
-  displaly: "none",
-});
-
 function crsrAnamation() {
   document.addEventListener("mousemove", function (e) {
     gsap.to("#crsr", {
@@ -41,8 +10,71 @@ function crsrAnamation() {
 }
 crsrAnamation();
 
-gsap.from("#hero1 h1, #hero2 h1, #hero3 div, #hero4 h1", {
-  y: 170,
-  duration: 0.6,
-  stagger: 0.3,
-});
+let tl = gsap.timeline();
+function loder() {
+  tl.from("#loder .line h1, .line p", {
+    y: 160,
+    duration: 0.6,
+    stagger: 0.5,
+    delay: 0.5,
+  });
+  tl.to("#loder .line h3", {
+    opacity: 1,
+    duration: 0.3,
+    onStart: function () {
+      let count = "";
+      setInterval(function () {
+        if (count === 100) {
+          clearInterval();
+        } else {
+          count++;
+          h2.innerHTML = count;
+        }
+      }, 30);
+    },
+  });
+  tl.from("#loder .line #line_part_1 h2", {
+    opacity: 0,
+    delay: 0.3,
+    duration: 0.5,
+  });
+  tl.from('#loder .line p',{
+    opacity:0, 
+    duration: 0.5,
+  })
+  tl.to("#loder", {
+    opacity: 0,
+    duration: 0.5,
+    delay: 4,
+    display: "none",
+  });
+  tl.from("#page1", {
+    delay: 0.2,
+    y: 1500,
+    duration: 0.5,
+    ease: Power4,
+  });
+  // tl.from("#hero1 h1, #hero2 h1, #hero3 div, #hero4 h1", {
+  //   y: 170,
+  //   duration: 0.6,
+  //   stagger: 0.3,
+  // });
+}
+loder()
+
+function page1(){
+  tl.from('#page1 .nav_items h4',{
+    y: -100,
+    x: 100,
+    stagger: 0.5,
+    duration: .5,
+  })
+  tl.from('#page1 .hero h1, #page1 #hero3 div',{
+    y: 150,
+    stagger: 0.3,
+    duration: 0.5,
+  })
+}
+page1()
+Shery.makeMagnet("#page1 nav .nav_items h4", {});
+
