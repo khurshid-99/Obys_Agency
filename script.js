@@ -65,10 +65,10 @@ function loder() {
     opacity: 0,
     duration: 0.5,
   });
-  tl.to("#loder", {
+  tl.to("#loder, #loder .line h1, .line p", {
     opacity: 0,
     duration: 0.5,
-    delay: 4,
+    delay: 3,
     display: "none",
   });
   tl.from("#page1", {
