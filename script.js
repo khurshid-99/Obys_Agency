@@ -1,13 +1,5 @@
 const h2 = document.querySelector("#line_part_1 h2");
 
-function crsrAnamation() {
-  document.addEventListener("mousemove", function (e) {
-    gsap.to("#crsr", {
-      y: e.y,
-      x: e.x,
-    });
-  });
-}
 crsrAnamation();
 
 let tl = gsap.timeline();
@@ -17,6 +9,7 @@ function loder() {
     duration: 0.6,
     stagger: 0.5,
     delay: 0.5,
+    opacity: 1,
   });
   tl.to("#loder .line h3", {
     opacity: 1,
@@ -38,10 +31,10 @@ function loder() {
     delay: 0.3,
     duration: 0.5,
   });
-  tl.from('#loder .line p',{
-    opacity:0, 
+  tl.from("#loder .line p", {
+    opacity: 0,
     duration: 0.5,
-  })
+  });
   tl.to("#loder", {
     opacity: 0,
     duration: 0.5,
@@ -54,27 +47,30 @@ function loder() {
     duration: 0.5,
     ease: Power4,
   });
-  // tl.from("#hero1 h1, #hero2 h1, #hero3 div, #hero4 h1", {
-  //   y: 170,
-  //   duration: 0.6,
-  //   stagger: 0.3,
-  // });
 }
-// loder()
+// loder();
 
-function page1(){
-  tl.from('#page1 .nav_items h4',{
+function crsrAnamation() {
+  document.addEventListener("mousemove", function (e) {
+    gsap.to("#crsr", {
+      y: e.y,
+      x: e.x,
+    });
+  });
+}
+
+function page1() {
+  tl.from("#page1 .nav_items h4", {
     y: -100,
     x: 100,
     stagger: 0.5,
-    duration: .5,
-  })
-  tl.from('#page1 .hero h1, #page1 #hero3 div',{
+    duration: 0.5,
+  });
+  tl.from("#page1 .hero h1, #page1 #hero3 div", {
     y: 150,
     stagger: 0.3,
     duration: 0.5,
-  })
+  });
 }
-// page1()
+page1();
 Shery.makeMagnet("#page1 nav .nav_items h4", {});
-
