@@ -16,8 +16,8 @@ body {
   overflow-x: hidden;
 }
 #crsr {
-  width: 2vw;
-  height: 2vw;
+  width: 2.3vw;
+  height: 2.3vw;
   border-radius: 50%;
   /* background-color: #fff; */
   border: 1.5px solid #ffffff7d;
@@ -33,7 +33,7 @@ body {
   z-index: 9999;
   background-color: #0b0b0b;
   padding: 20vh 4vw;
-  display: none;
+  /* display: none; */
 }
 #loder .line {
   overflow: hidden;
@@ -76,7 +76,7 @@ body {
 #loder .line:nth-last-child(2) h3 {
   font-size: 5vw;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 100;
   font-family: "Plain Light";
   opacity: 0;
   animation-name: textBlink;
@@ -134,17 +134,31 @@ main #page1 nav {
   font-weight: 500;
   text-transform: capitalize;
 }
+#wraper_hero {
+  height: fit-content;
+  /* background-color: red; */
+}
+#wraper_hero::before {
+  content: "01";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-weight: 100;
+  left: 19%;
+  top: 31%;
+}
 .hero {
-  /* background-color: #da1010; */
+  /* background-color: #330505; */
   width: 72%;
   margin-left: 27%;
-  overflow: hidden;
+  overflow-y: hidden;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 999;
+  /* z-index: 999; */
 }
-.hero:nth-child(2) {
+
+.hero:nth-child(1) {
   margin-top: 18vh;
 }
 .hero h1,
@@ -155,6 +169,7 @@ main #page1 nav {
   text-transform: uppercase;
   line-height: 7.2vw;
 }
+
 #hero3 div {
   display: flex;
   align-items: center;
@@ -234,6 +249,15 @@ main #page1 nav {
   position: relative;
   padding: 7vh 0;
 }
+#page4_content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-weight: 100;
+  left: 20%;
+  top: 4%;
+}
 #page4_content {
   width: 72vw;
   margin-left: 28%;
@@ -274,7 +298,6 @@ main #page1 nav {
   position: relative;
   margin-top: -37vh;
   margin-left: 24vw;
-
 }
 #page4_blue_div .blue_div_elem {
   display: flex;
@@ -292,8 +315,117 @@ main #page1 nav {
   width: 40%;
   font-size: 0.7vw;
 }
-#page5{
+#page5 {
   width: 100%;
   min-height: 100vh;
   background-color: #151515;
+  position: relative;
+}
+#page5 .elem {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -3vw;
+}
+#page5 .elem h1 {
+  /* background-color: red; */
+  font-size: 6.5vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: textScroll;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#page5 .elem2 {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -3vw;
+}
+#page5 .elem2 h1 {
+  /* background-color: red; */
+  font-size: 6.5vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: textScroll;
+  transform: translateX(calc(-100% - 20px));
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+#page5 .elem span {
+  font-style: italic;
+  font-family: "Silk Serif";
+  color: transparent;
+}
+#page5 .elem2 span {
+  font-style: italic;
+  font-family: "Silk Serif";
+  color: transparent;
+}
+@keyframes textScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+footer {
+  width: 100%;
+  height: 80vh;
+  background-color: #151515;
+  position: relative;
+  padding-left: 30vw;
+}
+footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-weight: 100;
+  left: 20%;
+  top: 3%;
+}
+footer h1 {
+  font-size: 8vw;
+  /* background-color: blue; */
+}
+footer .under_line {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2vw 0;
+}
+.footer_div {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15vw;
+  padding-top: 4vw;
+  margin-bottom: 3vw;
+}
+.box {
+  width: 20%;
+}
+.footer_div h6 {
+  font-size: 0.9vw;
+  margin-bottom: 1.5vw;
+}
+.footer_div h5 {
+  font-size: 1.3vw;
+  margin: 0.2vh 0;
+}
+footer > h5 {
+  font-weight: 500;
+  font-size: 1vw;
 }
