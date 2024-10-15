@@ -4,6 +4,23 @@ const videoContainer = document.querySelector(".video_container");
 const videoCursor = document.querySelector(".video_cursor");
 const i1 = document.querySelector(".video_cursor #i1");
 const i2 = document.querySelector(".video_cursor #i2");
+const hero3 = document.querySelector("#hero3");
+
+// const page1NaveItem = document.querySelectorAll('.nav_part1 .item')
+
+// console.log(page1NaveItem);
+
+// page1NaveItem.forEach((item, index)=>{
+//   console.log(item);
+//   console.log(index);
+//   if (index === 2) {
+//     item.style.marginRight = "7vw"
+//   }else{
+//     item.style.color = 'black'
+//   }
+// });
+
+
 
 function locomotivScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -228,14 +245,14 @@ function videoCursorAnamition(params) {
     videoCursor.style.top = "-10%";
   });
 }
-function page1FlageAnamation(params) {
+function page1FlageAnamation() {
   document.addEventListener("mousemove", function (dets) {
     gsap.to("#flag", {
       x: dets.x,
       y: dets.y,
     });
   });
-  const hero3 = document.querySelector("#hero3");
+  
   hero3.addEventListener("mouseenter", function () {
     gsap.to("#flag", {
       opacity: 1,
@@ -248,8 +265,8 @@ function page1FlageAnamation(params) {
   });
 }
 locomotivScroll();
-loder();
+// loder();
 crsrAnamation();
 videoCursorAnamition();
 shreyAniimation();
-page1FlageAnamation();
+// page1FlageAnamation();
