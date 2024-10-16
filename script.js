@@ -5,22 +5,7 @@ const videoCursor = document.querySelector(".video_cursor");
 const i1 = document.querySelector(".video_cursor #i1");
 const i2 = document.querySelector(".video_cursor #i2");
 const hero3 = document.querySelector("#hero3");
-
-// const page1NaveItem = document.querySelectorAll('.nav_part1 .item')
-
-// console.log(page1NaveItem);
-
-// page1NaveItem.forEach((item, index)=>{
-//   console.log(item);
-//   console.log(index);
-//   if (index === 2) {
-//     item.style.marginRight = "7vw"
-//   }else{
-//     item.style.color = 'black'
-//   }
-// });
-
-
+const video = document.querySelector(".video_container video");
 
 function locomotivScroll() {
   gsap.registerPlugin(ScrollTrigger);
@@ -99,11 +84,10 @@ function loder() {
     duration: 0.5,
     ease: Power4,
   });
-  tl.from("#page1 .nav_items h4", {
-    y: -100,
-    x: 100,
-    stagger: 0.5,
-    duration: 0.5,
+  tl.from("#page1 nav, #page1_part2", {
+    opacity: 0,
+    ease: Power4,
+    scale: 0,
   });
   tl.from("#page1 .hero h1, #page1 #hero3 div", {
     y: 150,
@@ -125,18 +109,10 @@ function crsrAnamation() {
     });
   });
 
-  Shery.makeMagnet("#page1 nav .nav_items h4" /* Element to target.*/, {
-    //Parameters are optional.
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
-  // Shery.makeMagnet("#page1 nav .nav_items h4");
-  // --------------------------
+  Shery.makeMagnet("#page1 nav .nav_part2 ul li");
 
   // ------------------------------
 
-  
-  const video = document.querySelector(".video_container video");
   function cursorAnamation() {
     videoContainer.addEventListener("mouseenter", function () {
       videoContainer.addEventListener("mousemove", function (dets) {
@@ -182,7 +158,7 @@ function crsrAnamation() {
 }
 
 function shreyAniimation() {
-  Shery.imageEffect(".imge_div", {
+  Shery.imageEffect(".page3_img_div", {
     style: 5,
     config: {
       a: { value: 2, range: [0, 30] },
@@ -219,7 +195,7 @@ function shreyAniimation() {
   });
 }
 
-function videoCursorAnamition(params) {
+function videoCursorAnamition() {
   videoContainer.addEventListener("mousemove", (e) => {
     const rect = videoContainer.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -247,26 +223,194 @@ function videoCursorAnamition(params) {
 }
 function page1FlageAnamation() {
   document.addEventListener("mousemove", function (dets) {
-    gsap.to("#flag", {
+    gsap.to("#page1_flag", {
       x: dets.x,
       y: dets.y,
     });
   });
-  
+
   hero3.addEventListener("mouseenter", function () {
-    gsap.to("#flag", {
+    gsap.to("#page1_flag", {
       opacity: 1,
     });
   });
   hero3.addEventListener("mouseleave", function () {
-    gsap.to("#flag", {
+    gsap.to("#page1_flag", {
       opacity: 0,
     });
   });
 }
+
 locomotivScroll();
 // loder();
 crsrAnamation();
 videoCursorAnamition();
 shreyAniimation();
-// page1FlageAnamation();
+page1FlageAnamation();
+
+// -------------------------
+
+// ------------------
+
+const page3Part1Inner1Text = document.querySelector(".page3_part1_inner1");
+const page3Part1Inner2Text = document.querySelector(".page3_part1_inner2");
+const page3Part2Inner2Text = document.querySelector(".page3_part2_inner2");
+const page3Part2Inner3Text = document.querySelector(".page3_part2_inner3");
+const page3Part3Inner1Text = document.querySelector(".page3_part3_inner1");
+const page3Part3Inner3Text = document.querySelector(".page3_part3_inner3");
+
+page3Part1Inner1Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part1_inner1_text h3", {
+    y: -50,
+  });
+});
+page3Part1Inner1Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part1_inner1_text h3", {
+    y: 0,
+  });
+});
+
+page3Part1Inner2Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part1_inner2_text h3", {
+    y: -50,
+  });
+});
+page3Part1Inner2Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part1_inner2_text h3", {
+    y: 0,
+  });
+});
+
+page3Part2Inner2Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part2_inner2_text h3", {
+    y: -50,
+  });
+});
+page3Part2Inner2Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part2_inner2_text h3", {
+    y: 0,
+  });
+});
+
+page3Part2Inner3Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part2_inner3_text h3", {
+    y: -50,
+  });
+});
+page3Part2Inner3Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part2_inner3_text h3", {
+    y: 0,
+  });
+});
+
+page3Part3Inner1Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part3_inner1_text h3", {
+    y: -50,
+  });
+});
+page3Part3Inner1Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part3_inner1_text h3", {
+    y: 0,
+  });
+});
+
+page3Part3Inner3Text.addEventListener("mouseenter", function (e) {
+  gsap.to(".page3_part3_inner3_text h3", {
+    y: -50,
+  });
+});
+page3Part3Inner3Text.addEventListener("mouseleave", function (e) {
+  gsap.to(".page3_part3_inner3_text h3", {
+    y: 0,
+  });
+});
+
+// ------------------------------
+
+let footerH1 = document.querySelector("#footer_hadline h1");
+let footerH2 = document.querySelector("#footer_hadline h2");
+
+function footerAnimationTex() {
+  let text1 = "";
+  let text2 = "";
+
+  let footerTex1 = footerH1.textContent.split("");
+  let footerTex2 = footerH2.textContent.split("");
+  footerTex1.forEach(function (elem1) {
+    text1 += `<span>${elem1}</span>`;
+  });
+  footerTex2.forEach(function (elem2) {
+    text2 += `<span>${elem2}</span>`;
+  });
+  footerH1.innerHTML = text1;
+  footerH2.innerHTML = text2;
+
+  const footer = document.querySelector('#footer_hadline')
+  footer.addEventListener('mouseenter',function(){
+    gsap.to('#footer_hadline h1, #footer_hadline h1 span',{
+      opacity: 0,
+      stagger: 0.05,
+    })
+    // gsap.to('#footer_hadline h2, #footer_hadline h2 span',{
+    //   delay: 0.35,
+    //   opacity: 1,
+    //   stagger: 0.1,
+    // })
+  })
+
+  footer.addEventListener('mouseleave',function(){
+    gsap.to('#footer_hadline h1, #footer_hadline h1 span',{
+      opacity: 1,
+      stagger: 0.1,
+      delay: 0.35,
+    })
+    // gsap.from('#footer_hadline h2, #footer_hadline h2 span',{
+    //   opacity: 0,
+    //   stagger: 0.05,
+    // })
+  })
+}
+
+footerAnimationTex()
+
+
+
+// --------------------------------
+
+// function footerAnimation() {
+
+//   var clutter = ""
+//   var clutter2 = ""
+//   document.querySelector("#footer h1").textContent.split("").forEach(function (elem) {
+//     clutter += `<span>${elem}</span>`
+//   })
+//   document.querySelector("#footer h1").innerHTML = clutter
+//   document.querySelector("#footer h2").textContent.split("").forEach(function (elem) {
+//     clutter2 += `<span>${elem}</span>`
+//   })
+//   document.querySelector("#footer h2").innerHTML = clutter2
+
+//   document.querySelector("#footer-text").addEventListener("mouseenter", function () {
+//     gsap.to("#footer h1 span", {
+//       opacity: 0,
+//       stagger: 0.05
+//     })
+//     gsap.to("#footer h2 span", {
+//       delay: 0.35,
+//       opacity: 1,
+//       stagger: 0.1
+//     })
+//   })
+//   document.querySelector("#footer-text").addEventListener("mouseleave", function () {
+//     gsap.to("#footer h1 span", {
+//       opacity: 1,
+//       stagger: 0.1,
+//       delay: 0.35,
+
+//     })
+//     gsap.to("#footer h2 span", {
+//       opacity: 0,
+//       stagger: 0.05
+//     })
+//   })
+// }
