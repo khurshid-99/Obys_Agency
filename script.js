@@ -242,7 +242,7 @@ function page1FlageAnamation() {
 }
 
 locomotivScroll();
-// loder();
+loder();
 crsrAnamation();
 videoCursorAnamition();
 shreyAniimation();
