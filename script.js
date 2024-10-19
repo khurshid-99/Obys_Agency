@@ -59,7 +59,7 @@ function loder() {
           count++;
           h2.innerHTML = count;
         }
-      }, 30);
+      }, 27);
     },
   });
   tl.from("#loder .line #line_part_1 h2", {
@@ -74,7 +74,7 @@ function loder() {
   tl.to("#loder, #loder .line h1, .line p", {
     opacity: 0,
     duration: 0.5,
-    delay: 3,
+    delay: 2,
     display: "none",
   });
   tl.from("#page1", {
@@ -248,8 +248,6 @@ videoCursorAnamition();
 shreyAniimation();
 page1FlageAnamation();
 
-// -------------------------
-
 // ------------------
 function Page3(params) {
   
@@ -354,11 +352,6 @@ function footerAnimationTex() {
       opacity: 0,
       stagger: 0.05,
     })
-    // gsap.to('#footer_hadline h2, #footer_hadline h2 span',{
-    //   delay: 0.35,
-    //   opacity: 1,
-    //   stagger: 0.1,
-    // })
   })
 
   footer.addEventListener('mouseleave',function(){
@@ -367,13 +360,7 @@ function footerAnimationTex() {
       stagger: 0.1,
       delay: 0.35,
     })
-    // gsap.from('#footer_hadline h2, #footer_hadline h2 span',{
-    //   opacity: 0,
-    //   stagger: 0.05,
-    // })
   })
 }
-
 footerAnimationTex()
-// --------------------------------
 

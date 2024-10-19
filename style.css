@@ -1,23 +1,19 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+@font-face {
+  font-family: "Plain Light";
+  src: url("./fonts/plain-light-webfont.ttf");
+}
+@font-face {
+  font-family: "Plain Light";
+  src: url("./fonts/plain-regular-webfont.ttf");
+}
+@font-face {
+  font-family: "Silk Serif";
+  src: url("./fonts/silkserif-lightitalic-webfont.ttf");
+}
+@font-face {
+  font-family: "Silk Serif";
+  src: url("./fonts/silkserif-regularitalic-webfont.ttf");
+}
 
 * {
   margin: 0;
@@ -44,8 +40,6 @@ body {
   z-index: 9999;
   background-color: #0b0b0b;
   padding: 20vh 4.5vw;
-  /* cursor: none; */
-  /* display: none; */
 }
 #loder .line {
   overflow: hidden;
@@ -107,8 +101,8 @@ body {
   opacity: 0;
   -webkit-animation-name: textBlink;
   animation-name: textBlink;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
@@ -124,7 +118,7 @@ body {
     -webkit-text-stroke: 1px #fff;
     color: transparent;
   }
-  45% {
+  40% {
     font-family: "Plain Light";
   }
   50% {
@@ -1210,12 +1204,12 @@ footer h1::before {
   font-size: 3vw;
   font-family: "Silk Serif";
   font-weight: 100;
-  left: -13%;
+  left: -0%;
   top: 12%;
 }
 #footer_hadline {
   position: relative;
-  margin-left: -0.7vw;
+  margin-left: -10vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1227,8 +1221,8 @@ footer h1::before {
   font-size: 8vw;
   text-transform: uppercase;
   font-weight: 500;
-  margin-right: 2vw;
   z-index: 999;
+  margin-left: 9vw;
 }
 #footer_hadline h2 {
   position: absolute;
@@ -1887,15 +1881,14 @@ footer > h5 {
     font-size: 5vw;
     font-family: "Silk Serif";
     font-weight: 500;
-    left: 0%;
+    left: 10%;
     top: 60%;
   }
   #footer_hadline {
-    margin-left: 0vw;
+    margin-left: -10vw;
   }
   #footer_hadline h2,
   #footer_hadline h1 {
-    margin-right: 0vw;
     font-size: 10vw;
     margin-top: 40vw;
   }
